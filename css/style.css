@@ -1,0 +1,525 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+body {
+  padding: 0rem 3%;
+}
+
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 5rem;
+}
+
+/* Navbar */
+.reg-links {
+  display: flex;
+  max-height: 5vh;
+  background: rgba(226, 226, 226, 0.267);
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.jumpman-brand h1 {
+  font-size: 1rem;
+  justify-items: center;
+}
+
+.first_links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.first_links a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  margin: 0rem 0.5rem;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logos img {
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 4rem;
+}
+
+.navbar a {
+  margin: 0 1rem;
+  font-size: 1rem;
+  color: black;
+  justify-self: end;
+}
+
+.navbar a:hover {
+  border-bottom: 0.12rem solid black;
+  padding-bottom: 0.1rem;
+  transition: all 0.2s ease;
+}
+
+.btn_icon {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.search {
+  border-radius: 30px;
+  border: 1px solid #f5f5f5;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  background: #f5f5f5;
+}
+
+#input-search {
+  outline: none;
+  border: none;
+  background: #f5f5f5;
+}
+
+.heart a img:hover,
+.bag a img:hover {
+  transform: scale(1.2);
+}
+
+.cart-count {
+  color: white;
+  padding: 4px 7px;
+  font-size: 10px;
+  border-radius: 50px;
+  background: black;
+  position: relative;
+  bottom: 10px;
+  right: 25px;
+}
+
+.jumpman {
+  display: none;
+}
+
+.dropdown a {
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown a:hover {
+  border-bottom: 1px solid black;
+}
+
+.dropdown button:focus + ul {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0px);
+}
+
+/* Mobile View Styles For Menu */
+.menu {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  background: none;
+  border: none;
+  z-index: 10;
+  transition: all 0.25s;
+  display: none;
+}
+
+.menu-top,
+.menu-middle,
+.menu-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #000;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.menu-middle {
+  transform: translateY(7px);
+}
+
+.menu-bottom {
+  transform: translateY(14px);
+}
+
+.open .menu-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .menu-middle {
+  display: none;
+}
+
+.open .menu-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+/* Jordan Section(Intro) */
+.brand {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.column img {
+  max-width: 100%;
+}
+
+.column h1,
+p {
+  font-size: 1.5rem;
+}
+
+.column:hover {
+  cursor: pointer;
+}
+
+/* Popular Section */
+.popular h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0rem;
+}
+
+.popular-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.card {
+  transform-style: preserve-3d;
+  min-height: 35vh;
+  width: 25rem;
+  border-radius: 30px;
+  padding: 0 3rem;
+  border: 1rem black;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+.sneaker {
+  min-height: 23vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sneaker img {
+  width: 18rem;
+  z-index: 2;
+  transition: all 0.75s ease-out;
+}
+
+.info h1 {
+  font-size: 2.5rem;
+  transition: all 0.75s ease-out;
+}
+
+.info h3 {
+  font-size: 1.3rem;
+  padding: 2rem 0rem;
+  color: black;
+  font-weight: lighter;
+  transition: all 0.75s ease-out;
+}
+
+.sizes {
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.75s ease-out;
+  flex-wrap: wrap;
+}
+
+.sizes button {
+  padding: 1rem 2rem;
+  margin-bottom: 0.3rem;
+  background: none;
+  border: none;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #585858;
+}
+
+button.active {
+  background: #585858;
+  color: white;
+}
+
+.size-popular:hover {
+  background: #585858;
+  color: white;
+}
+
+.purchase {
+  margin-top: 1rem;
+  transition: all 0.75s ease-out;
+}
+.purchase button {
+  width: 100%;
+  padding: 1rem 0rem;
+  background: #f54642;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: bolder;
+  margin-bottom: 2rem;
+}
+
+/* Grids */
+.brand-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.brand-card {
+  border-radius: 30px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.brand-card:hover {
+  /* cursor: pointer; */
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+.brand-card:hover .brand-card-image img {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.brand-card-image {
+  height: 15rem;
+  overflow: hidden;
+  width: 100%;
+  pointer-events: all;
+}
+
+.brand-card-image img {
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.brand-card-content {
+  padding: 2rem;
+}
+
+.brand-card-content h4 {
+  display: block;
+  padding-top: 1rem;
+  font-size: 1rem;
+}
+
+.brand-card-content h4 a {
+  text-decoration: none;
+  color: black;
+}
+
+.brand-card-content h4 a:hover {
+  transition: all 0.3s ease;
+  border-bottom: 0.5px solid black;
+}
+
+.brand-card-content span {
+  font-size: 1rem;
+  line-height: 1.8;
+  padding: 1rem 0;
+}
+
+/* Footer */
+.footer-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px 30px;
+}
+
+.footer-container p {
+  display: flex;
+  justify-content: center;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.social img {
+  width: 35px;
+  height: 35px;
+}
+
+.social a {
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.divider {
+  margin-top: 1rem;
+  width: 95%;
+  height: 1px;
+  background-color: black;
+  margin: 40px auto;
+}
+
+/* Media Queries */
+
+@media (max-width: 1025px) {
+  .card {
+    margin-top: 2rem;
+    height: 300px;
+    min-height: 40vh;
+  }
+  .sneaker {
+    min-height: 10vh;
+  }
+  .info h1 {
+    padding: 0rem;
+    margin: 0rem;
+  }
+  .info h3 {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .popular-purchase {
+    margin-bottom: 2rem;
+  }
+  .brand {
+    margin-top: 5rem;
+  }
+  .column h1,
+  p {
+    font-size: 1rem;
+  }
+  .popular-container {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+}
+@media (max-width: 768px) {
+  .reg-links {
+    display: none;
+  }
+  .header {
+    margin-bottom: 3rem;
+  }
+  .navbar,
+  .icons {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+  .jumpman {
+    justify-self: center;
+    align-self: center;
+    font-weight: bold;
+    display: block;
+  }
+  .brand {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  #nike,
+  #yeezy {
+    border-top: 1px solid black;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+  .popular-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .card {
+    min-width: 400px;
+    min-height: 650px;
+    box-shadow: none;
+    border: 1px solid #585858;
+  }
+  .sneaker {
+    min-height: 25vh;
+  }
+  .sizes {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .sizes button {
+    box-shadow: none;
+    border: 1px solid #585858;
+    color: black;
+  }
+  .info h3 {
+    color: black;
+  }
+  .brand-container {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .brand-card {
+    min-width: 400px;
+    max-height: 500px;
+  }
+}

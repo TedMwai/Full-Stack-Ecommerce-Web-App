@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background: white;
+  padding: 0 10px;
+  margin-top: 2rem;
+}
+
+.container {
+  display: flex;
+  max-width: 60rem;
+  background: white;
+  margin: 2rem auto;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.125),
+    0px 0px 50px rgba(0, 0, 0, 0.125);
+  border-radius: 30px;
+  gap: 1.5rem;
+  justify-self: center;
+}
+
+.image {
+  flex-basis: 50%;
+}
+
+.image img {
+  max-width: 100%;
+  height: 100%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.content {
+  flex-basis: 50%;
+}
+
+.form {
+  border-top-right-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 85%;
+}
+
+.title {
+  margin: 1.5rem;
+  text-align: center;
+}
+
+.inputfield {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.inputfield label {
+  width: 10rem;
+  color: black;
+  margin-right: 1rem;
+  font-size: 1.3rem;
+}
+
+.input {
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 1.3rem;
+  padding: 8px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  border: 1px solid #da8777;
+}
+
+.custom_select {
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+.custom_select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 6px 10px;
+  font-size: 1.3rem;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+.custom_select:before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.register .form .inputfield p {
+  font-size: 14px;
+  color: #757575;
+}
+
+.inputBtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 1rem 0.5rem;
+  font-size: 1rem;
+  border: none;
+  background: black;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.btn:hover {
+  color: white;
+  background-color: #757575;
+}
+
+.inputfield small {
+  margin-left: 1rem;
+  color: red;
+  display: none;
+}
+
+.input.error {
+  border: 1px solid #e74c3c;
+}
+
+.small {
+  color: #f01f08;
+}
+
+.input.problem {
+  border: none;
+}
+
+.sign-in {
+    text-align: center;
+    font-size: 1rem;
+}
+.sign-in p {
+    margin: 1.2rem 0rem;
+}
+.sign-in a {
+    color: black;
+}
